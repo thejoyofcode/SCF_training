@@ -1,0 +1,63 @@
+
+Git from the begining:
+
+#see possible commands
+$ git
+
+#setup git locally
+$ git config --global user.name "anna"
+$ git config --global user.email "annawilliford@gmail.com"
+$ git config --global core.editor "nano -w"
+
+#view your setup
+$ git config --list
+
+#make a new directory that we place under git control
+$ mkdir MyFirstRepo
+
+$ cd MyFistRepo
+
+#initialize your folder/repository
+$ git init
+
+#make an empty file
+$ touch MyFile.txt
+
+#add sentence to file
+$ echo "this is my first file in git folder" > MyFile.txt
+
+#or you can use nano editor to modify your text
+$ nano MyFile.txt
+** Ctrl X to exit
+
+#add files to be tracked by git
+$ git add MyFile.txt
+** you might get this warning
+warning: LF will be replaced by CRLF in MyFile.txt.
+The file will have its original line endings in your working directory.
+** this change line ending charctes to Windows (LF -Unix; CR-Mac)
+
+#check what is new in your folder - can see which files have bee added to version control and which ones are still untracked.
+$ git status
+
+#modify your file
+$ nano MyFile.txt
+**add "Date:unknown"
+
+#commit your change (this change will be recorderd)
+$ git commit -m "new date"
+
+#check what changed in your folder
+$ git status
+
+#view file without eddititng:
+$ cat MyFile.txt
+
+#check the history of your changes to the folder
+$ git log
+
+#add remoe repository to git
+$ git remote add origin https://github.com/thejoyofcode/SCF_training.git
+
+#confirm remote repository have been added
+git remote -v
