@@ -1,5 +1,5 @@
 
-Git from the begining:
+Git from the beginning:
 
 #see possible commands
 $ git
@@ -56,8 +56,11 @@ $ cat MyFile.txt
 #check the history of your changes to the folder
 $ git log
 
-#add remoe repository to git
+#add remote repository to git
 $ git remote add origin https://github.com/thejoyofcode/SCF_training.git
+
+#add files from local repository to master branch of my remote repository
+$ git push -u origin master
 
 #confirm remote repository have been added
 git remote -v
